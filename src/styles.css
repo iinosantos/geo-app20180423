@@ -1,0 +1,17 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url(//fonts.googleapis.com/css?family=Roboto);
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+* {
+  font-family: 'Roboto';
+  font-size: 13px;
+}
+
+*:focus {
+  outline: none !important;
+}
+app-root, body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}/* You can add global styles to this file, and also import other style files */

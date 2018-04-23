@@ -1,0 +1,80 @@
+.row {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+agm-map {
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+#menu-container {
+  position: absolute;
+  top: 0;
+  z-index: 4;
+}
+
+mat-card {
+  border-radius: 0;
+  margin: 8px 0 8px 8px;
+  padding: 0;
+  width: 230px;
+}
+
+mat-card-header {
+  background-color: #4285f4;
+  color: white;
+  font-family: 'Open Sans' !important;
+  font-weight: bold;
+  padding: 12px 7px;
+}
+
+mat-card-title {
+  font-size: 13px !important;
+  margin-bottom: 0;
+}
+
+mat-card-content {
+  padding: 10px 15px;
+  margin-bottom: 0;
+}
+
+mat-card-content span {
+  display: block;
+}
+
+input {
+  border: none;
+  color: #333;
+  width: 160px;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.button-container span {
+  color: #34a853;
+  display: inline;
+  font-weight: 500;
+  position: relative;
+}
+
+button.mat-button.mat-primary {
+  color: #4285f4;
+  min-width: 55px;
+  padding: 0;
+}
+
+a.mat-button {
+  color: #4285f4;
+  margin-left: 59px;
+  text-decoration: none;
+}
+
+#result-container {
+  display: none;
+}

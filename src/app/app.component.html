@@ -1,0 +1,65 @@
+<agm-map
+  [zoom]="zoom"
+  [latitude]="latitude"
+  [longitude]="longitude">
+  <agm-data-layer
+    [geoJson]="geoJson"
+    (layerClick)="chooseMarker($event)"
+    (mouseOver)="chooseMarker($event)"
+    [style]="styleFunc">
+  </agm-data-layer>
+</agm-map>
+<div id="menu-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field>
+        <input matInput
+               [matDatepicker]="startpicker"
+               [(ngModel)]="startDate"
+               placeholder="Choose a start date">
+        <mat-datepicker-toggle matSuffix [for]="startpicker"></mat-datepicker-toggle>
+        <mat-datepicker #startpicker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput ="endpicker"
+               [matDatepicker]="endpicker"
+               [(ngModel)]="endDate"
+               placeholder="Choose an end date">
+        <mat-datepicker-toggle matSuffix [for]="endpicker"></mat-datepicker-toggle>
+        <mat-datepicker #endpicker></mat-datepicker>
+      </mat-form-field>
+      <div class="button-container">
+        <span>{{resultCount}}</span>
+        <button mat-button color="primary" (click)="clear()">Clear</button>
+        <button mat-button color="primary" (click)="submit()">Submit</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card id="result-container">
+    <mat-card-header>
+      <mat-card-title>
+        {{result.title}}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <span><strong>Date occurred:</strong><br>{{result.time}}</span>
+      <span><strong>Coordinates: </strong>{{result.coords}}</span>
+      <span><strong>Magnitude: </strong>{{result.magnitude}}</span>
+      <span><strong>Depth: </strong>{{result.depth}}</span>
+      <span><strong>Tsunami: </strong>{{result.tsunami}}</span>
+      <span><strong>Felt Reports: </strong>{{result.felt}}</span>
+      <span><strong>Travel Time Residual: </strong>{{result.ttr}}</span>
+      <span><strong>Azimuthal Gap: </strong>{{result.gap}}</span>
+      <span><strong>Status: </strong>{{result.status}}</span>
+      <a mat-button color="primary" target="_blank" href="{{result.url}}">
+        Click for more info
+      </a>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
