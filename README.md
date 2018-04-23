@@ -1,3 +1,5 @@
+# geo-app
+
 A web app that visualizes earthquakes that occurred in the Philippines filtered by dates.
 
 ## Getting Started
