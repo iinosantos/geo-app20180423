@@ -43,6 +43,7 @@
       <mat-card-title>
         {{result.title}}
       </mat-card-title>
+      <img src="../assets/ic_close_white_24px.svg" (click)="closeResult()" />
     </mat-card-header>
     <mat-card-content>
       <span><strong>Date occurred:</strong><br>{{result.time}}</span>

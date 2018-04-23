@@ -7,7 +7,7 @@ declare const google;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
@@ -63,6 +63,10 @@ export class AppComponent {
       'features': null
     };
     this.resultCount = '';
+    document.getElementById('result-container').style.display = 'none';
+  }
+
+  closeResult() {
     document.getElementById('result-container').style.display = 'none';
   }
 
