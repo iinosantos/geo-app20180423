@@ -9,7 +9,7 @@ A web app that visualizes earthquakes that occurred in the Philippines filtered 
 
 ```
 git clone https://github.com/iinosantos/geo-app20180423.git
-cd redux-saga-beginner-tutorial
+cd geo-app20180423
 ```
 
 ### Install packages
